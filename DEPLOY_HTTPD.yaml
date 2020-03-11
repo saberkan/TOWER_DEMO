@@ -1,6 +1,7 @@
 ---
 - name: deploy the application
   gather_facts: no
+  hosts: all
   tasks:
   - name: Set up httpd
     include_role:
