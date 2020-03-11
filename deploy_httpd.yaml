@@ -1,0 +1,9 @@
+- name: deploy the application
+  gather_facts: no
+  tasks:
+  - name: Set up httpd
+    include_role:
+      name: ./roles/httpd_openshift
+    vars:
+      namespace: "{{ namespace }}"
+      my_var_value: "{{ my_var_value }}"
