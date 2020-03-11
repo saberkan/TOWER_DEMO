@@ -1,5 +1,14 @@
 ---
 # tasks file for httpd_openshift
+- name: Create namespace
+  k8s:
+   state: present
+   definition:
+    kind: Namespace
+    apiVersion: v1
+    metadata:
+      name: "{{ namespace }}"
+
 - name: Create deploymentconfig
   k8s:
     state: present
