@@ -1,3 +1,4 @@
+---
 - name: deploy the application
   gather_facts: no
   tasks:
